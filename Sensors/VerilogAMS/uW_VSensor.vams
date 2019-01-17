@@ -1,0 +1,364 @@
+
+`include "disciplines.vams"
+ 
+(* cds_ams_schematic *)
+module uW_VSensor ( QBP,QP,vdd_pin,QB,gnd,Q,
+vdd,IREF ); 
+
+output   QBP;
+output   QP;
+inout   vdd_pin;
+output   QB;
+inout  
+ gnd;
+output   Q;
+inout   vdd;
+input   IREF;
+
+ 
+ 
+ 
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(4), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M26 ( vdd, IREF, vdd, 
+vdd );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(6), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(500n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M25 ( vdd, IREF, vdd, 
+vdd );
+pch #(.ad(2.4E-13), .nrd(0.54), .w(500n), .sca(0), .pd(1.96u), .scc(0),
+ .scb(0), .as(2.4E-13), .nrs(0.54), .m(10), .ps(1.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M24 ( vdd, IREF, vdd, 
+vdd );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .nf(2), .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M100 ( vdd, vdd, vdd, 
+vdd );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .nf(2), .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M106 ( gnd, gnd, gnd, 
+gnd );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(2), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M9 ( vbn, IREF, vdd, 
+vdd );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .sb(480.0n), .nf(2), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M102 ( net046, net046, 
+net32, net32 );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(8), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M10 ( net20, IREF, vdd, 
+vdd );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(2), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(4u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M12 ( vampgate, net012, 
+vdd, vdd );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(1), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M8 ( IREF, IREF, vdd, 
+vdd );
+pch #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(2), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(4u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M11 ( net012, net012, 
+vdd, vdd );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .nf(2), .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M103 ( net033, net033, 
+net046, net046 );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .sb(480.0n), .nf(2), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M105 ( gnd, gnd, net29, 
+net29 );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .sb(480.0n), .nf(2), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M101 ( net32, net32, 
+vdd, vdd );
+pch #(.ad(1.08E-12), .nrd(0.0675), .w(4u), .sca(0), .pd(5.08u), .scc(0),
+ .scb(0), .as(1.92E-12), .nrs(0.0675), .m(1), .ps(9.92u), .sa(480.0n),
+ .sb(480.0n), .nf(2), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M104 ( net29, net29, 
+net033, net033 );
+ 
+mench #(.ad(2.4E-13), .nrd(0.54), .w(500n), .sca(0), .pd(1.96u), .scc(0),
+ .scb(0), .as(2.4E-13), .nrs(0.54), .m(4), .ps(1.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(500n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M23 ( gnd, vbn, gnd, 
+gnd );
+mench #(.ad(2.4E-13), .nrd(0.54), .w(500n), .sca(0), .pd(1.96u), .scc(0),
+ .scb(0), .as(2.4E-13), .nrs(0.54), .m(6), .ps(1.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M21 ( gnd, vbn, gnd, 
+gnd );
+mench #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(6), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(500n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M22 ( gnd, vbn, gnd, 
+gnd );
+mench #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(2), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(500n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M19 ( gnd, vampgate, 
+gnd, gnd );
+mench #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(1), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M7 ( vbn, vbn, gnd, gnd );
+mench #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(2), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M2 ( net012, vampgate, 
+net42, gnd );
+mench #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(2), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M3 ( vampgate, vampgate, 
+net11, gnd );
+mench #(.ad(2.4E-12), .nrd(0.054), .w(5u), .sca(0), .pd(10.96u), .scc(0),
+ .scb(0), .as(2.4E-12), .nrs(0.054), .m(2), .ps(10.96u), .sa(480.0n), 
+.nf(1), .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M1 ( net11, net11, 
+net10, gnd );
+mench #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(2), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M5 ( S, vampgate, VC1, 
+gnd );
+mench #(.ad(9.6E-13), .nrd(0.135), .w(2u), .sca(0), .pd(4.96u), .scc(0),
+ .scb(0), .as(9.6E-13), .nrs(0.135), .m(8), .ps(4.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(2u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M6 ( net10, vbn, gnd, 
+gnd );
+mench #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(2), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M4 ( R, vampgate, VC0, 
+gnd );
+mench #(.ad(2.4E-12), .nrd(0.054), .w(5u), .sca(0), .pd(10.96u), .scc(0),
+ .scb(0), .as(2.4E-12), .nrs(0.054), .m(2), .ps(10.96u), .sa(480.0n), 
+.nf(1), .sb(480.0n), .sd(540.0n), .l(1u)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M0 ( net42, net033, 
+net10, gnd );
+ 
+INVD1BWP7T (*
+integer library_binding = "tcb018gb";
+ *)
+I13 ( Q, 
+net051, vdd_pin, gnd );
+INVD1BWP7T (*
+integer library_binding = "tcb018gb";
+ *)
+I15 ( QB, 
+net050, vdd_pin, gnd );
+ 
+pch3 #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(1), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(300n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M14 ( S, Q, net20, vdd );
+pch3 #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(1), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(300n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M13 ( R, QB, net20, vdd );
+ 
+mimcap_2p0_sin #(.mf(1), .mismatchflag(1), .wt(12.0u), .lt(17.0u)) (*
+
+integer library_binding = "tsmc18";
+ *)
+C3 ( IREF, vdd );
+mimcap_2p0_sin #(.mf(1), .mismatchflag(1), .wt(12.0u), .lt(17.0u)) (*
+
+integer library_binding = "tsmc18";
+ *)
+C2 ( IREF, vdd );
+mimcap_2p0_sin #(.mf(1), .mismatchflag(1), .wt(4.79u), .lt(4.79u)) (*
+
+integer library_binding = "tsmc18";
+ *)
+C0 ( VC0, gnd );
+mimcap_2p0_sin #(.mf(1), .mismatchflag(1), .wt(4.79u), .lt(4.79u)) (*
+
+integer library_binding = "tsmc18";
+ *)
+C1 ( VC1, gnd );
+ 
+nch3 #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(1), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(350.0n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M16 ( VC1, Q, gnd, gnd );
+nch3 #(.ad(1.44E-12), .nrd(0.09), .w(3u), .sca(0), .pd(6.96u), .scc(0),
+ .scb(0), .as(1.44E-12), .nrs(0.09), .m(1), .ps(6.96u), .sa(480.0n), .nf(1),
+ .sb(480.0n), .sd(540.0n), .l(350.0n)) (*
+integer library_binding
+ = "tsmc18";
+integer passed_mfactor = "m";
+ *)
+M15 ( VC0, QB, gnd, gnd );
+ 
+NOR2 (*
+integer library_binding = "PVT_Sensor";
+ *)
+I7 ( S, net38, 
+net23, vdd, gnd );
+NOR2 (*
+integer library_binding = "PVT_Sensor";
+ *)
+I8 ( R, net23, 
+net38, vdd, gnd );
+ 
+INV (*
+integer library_binding = "PVT_Sensor";
+ *)
+I9 ( net23, Q, vdd, 
+gnd );
+INV (*
+integer library_binding = "PVT_Sensor";
+ *)
+I10 ( net38, QB, 
+vdd, gnd );
+ 
+INVD4BWP7T (*
+integer library_binding = "tcb018gb";
+ *)
+I14 ( net051, 
+QP, vdd_pin, gnd );
+INVD4BWP7T (*
+integer library_binding = "tcb018gb";
+ *)
+I16 ( net050, 
+QBP, vdd_pin, gnd );
+
+endmodule
