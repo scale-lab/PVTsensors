@@ -24,7 +24,7 @@ These circuits were designed using Cadence® Virtuoso®. You must also separatel
 
 ## Setup
 
-Open terminal, change direction to your target folder ("tsmc18", assuming TSMC 180nm PDK is obtained) and type the following code:
+Open terminal, change direction to your target folder and type the following code:
 
 ```
 gitclone https://github.com/scale-lab/PVTsensors/tree/master/Sensors/
