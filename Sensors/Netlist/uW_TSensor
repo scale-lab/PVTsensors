@@ -1,0 +1,45 @@
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+.subckt NOR2 a1 a2 zn vdd vss
+m1 zn a2 vss vss nch3 l=350e-9 w=2e-6 m=1 nf=1 sd=540e-9 ad=960e-15 as=960e-15 pd=4.96e-6 ps=4.96e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m0 zn a1 vss vss nch3 l=350e-9 w=2e-6 m=1 nf=1 sd=540e-9 ad=960e-15 as=960e-15 pd=4.96e-6 ps=4.96e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m3 net8 a1 vdd vdd pch3 l=300e-9 w=2e-6 m=1 nf=1 sd=540e-9 ad=960e-15 as=960e-15 pd=4.96e-6 ps=4.96e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m2 zn a2 net8 vdd pch3 l=300e-9 w=2e-6 m=1 nf=1 sd=540e-9 ad=960e-15 as=960e-15 pd=4.96e-6 ps=4.96e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+.ends NOR2
+
+.subckt INV i zn vdd vss
+m0 zn i vss vss nch3 l=350e-9 w=1.5e-6 m=1 nf=1 sd=540e-9 ad=720e-15 as=720e-15 pd=3.96e-6 ps=3.96e-6 nrd=180e-3 nrs=180e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m1 zn i vdd vdd pch3 l=300e-9 w=2e-6 m=1 nf=1 sd=540e-9 ad=960e-15 as=960e-15 pd=4.96e-6 ps=4.96e-6 nrd=135e-3 nrs=135e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+.ends INV
+
+m7 iref iref vdd vdd pch l=4e-6 w=4e-6 m=1 nf=1 sd=540e-9 ad=1.92e-12 as=1.92e-12 pd=8.96e-6 ps=8.96e-6 nrd=67.5e-3 nrs=67.5e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m8 net20 iref vdd vdd pch l=4e-6 w=4e-6 m=2 nf=1 sd=540e-9 ad=1.92e-12 as=1.92e-12 pd=8.96e-6 ps=8.96e-6 nrd=67.5e-3 nrs=67.5e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m9 net15 iref vdd vdd pch l=4e-6 w=4e-6 m=2 nf=1 sd=540e-9 ad=1.92e-12 as=1.92e-12 pd=8.96e-6 ps=8.96e-6 nrd=67.5e-3 nrs=67.5e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m16 vdd vdd vdd vdd pch l=4e-6 w=4e-6 m=2 nf=1 sd=540e-9 ad=1.92e-12 as=1.92e-12 pd=8.96e-6 ps=8.96e-6 nrd=67.5e-3 nrs=67.5e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m0 s net15 vc1 gnd mench l=1e-6 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m1 r net15 vc0 gnd mench l=1e-6 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m13 gnd gnd gnd gnd mench l=1e-6 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m2 net15 net15 net023 gnd mench l=1e-6 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+d0 net023 gnd pdio area=87.5e-12 pj=75e-6 m=1
+m6 s q net20 vdd pch3 l=300e-9 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m5 r qb net20 vdd pch3 l=300e-9 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m4 vc1 q gnd gnd nch3 l=350e-9 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+m3 vc0 qb gnd gnd nch3 l=350e-9 w=3e-6 m=1 nf=1 sd=540e-9 ad=1.44e-12 as=1.44e-12 pd=6.96e-6 ps=6.96e-6 nrd=90e-3 nrs=90e-3 sa=480e-9 sb=480e-9 sca=0 scb=0 scc=0
+xi3 net38 s net23 vdd gnd NOR2
+xi4 net23 r net38 vdd gnd NOR2
+xi14 net029 qp vdd_pin gnd INV
+xi16 net024 qbp vdd_pin gnd INV
+xi13 q net029 vdd_pin gnd INV
+xi15 qb net024 vdd_pin gnd INV
+xi1 net23 q vdd gnd INV
+xi2 net38 qb vdd gnd INV
+xc1 vc1 gnd mimcap_2p0_sin lt=4.79e-6 wt=4.79e-6 mf=1 mismatchflag=1
+xc0 vc0 gnd mimcap_2p0_sin lt=4.79e-6 wt=4.79e-6 mf=1 mismatchflag=1
+xc4 iref vdd mimcap_2p0_sin lt=10e-6 wt=10e-6 mf=1 mismatchflag=1
+.END
