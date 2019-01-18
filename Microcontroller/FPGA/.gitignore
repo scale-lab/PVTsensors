@@ -1,0 +1,4 @@
+*.swp
+sw/build/*
+imperio
+ipstools
