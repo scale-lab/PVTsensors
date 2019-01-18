@@ -8,9 +8,17 @@ This folder contains three sensors:
 
 The temperature sensor produces a square wave output whose period decreases linearly with temperature. When powered at 1.8V, the output period ranges from 90ns at -20C, to 70ns at 100C.
 
+The schematic is shown below:
+
+![](https://github.com/scale-lab/PVTsensors/Sensors/Images/uW_TSensor.JPG/)
+
 - __Supply Voltage Sensor__:
 
 The supply voltage sensor produces a square wave output whose period increases linearly with supply voltage. At room temperature, the output period ranges from 90ns at 1.2V, to 110ns at 1.8V.
+
+The schematic is shown below:
+
+![](https://github.com/scale-lab/PVTsensors/Sensors/Images/uW_VSensor.JPG/)
 
 - __Critical Path Monitor__:
 
