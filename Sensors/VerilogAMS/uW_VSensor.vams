@@ -171,7 +171,7 @@ integer passed_mfactor = "m";
 M104 ( net29, net29, 
 net033, net033 );
  
-mench #(.w(2u), .m(1), .nf(1), .l(2u)) (*
+nch #(.w(2u), .m(1), .nf(1), .l(2u)) (*
 integer library_binding
  = "/*Target Process Technology*/";
 integer passed_mfactor = "m";
