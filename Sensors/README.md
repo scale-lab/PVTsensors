@@ -10,7 +10,9 @@ The temperature sensor produces a square wave output whose period decreases line
 
 The schematic is shown below:
 
-![](https://github.com/scale-lab/PVTsensors/Sensors/Images/uW_TSensor.JPG/)
+
+![](https://github.com/scale-lab/PVTsensors/blob/master/Sensors/Images/uW_TSensor.JPG)
+
 
 - __Supply Voltage Sensor__:
 
@@ -18,7 +20,9 @@ The supply voltage sensor produces a square wave output whose period increases l
 
 The schematic is shown below:
 
-![](https://github.com/scale-lab/PVTsensors/Sensors/Images/uW_VSensor.JPG/)
+
+![](https://github.com/scale-lab/PVTsensors/blob/master/Sensors/Images/uW_VSensor.JPG)
+
 
 - __Critical Path Monitor__:
 
