@@ -1,6 +1,6 @@
 ## General Overview
 
-This folder contains Netlist files for the Temperature Sensor and Supply Voltage Sensor. Designs are based on tsmc 180nm technology.
+This folder contains Netlist files for the Temperature Sensor and Supply Voltage Sensor. Designs were verified in tsmc 180nm technology.
 
 Model names used are listed below:
 

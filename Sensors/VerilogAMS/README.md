@@ -2,7 +2,7 @@
 
 This folder contains Verilog ams files for the Temperature Sensor and Supply Voltage Sensor
 
-Designs are based on tsmc 180nm technology. Please replace '/*Target Process Technology*/' with your target technology library!
+Designs were verified on tsmc 180nm technology. Please replace '/*Target Process Technology*/' with your target technology library!
 
 Model names used are listed below:
 
