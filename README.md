@@ -2,7 +2,7 @@
 This repository contains a collection of open-source circuits and software tools for PVT monitoring in custom ICs. This work was supported by the DARPA POSH open-source hardware program, under the umbrella of the Electronics Resurgence Initiative. 
 
 ## Hardware Sensor Designs
-The Sensors folder contains CMOS circuit designs for (1) an area- and power-efficient temperature sensor and (2) an area- and power-efficient CMOS supply voltage monitor.
+The Sensors folder contains CMOS circuit designs for (1) an area- and power-efficient temperature sensor, (2) an area- and power-efficient CMOS supply voltage monitor, and (3) a critical path monitor.
 
 ## Digital Infrastructure
 The PVT system contains both the sensor designs and an embedded lightweight RISC-V core based on the PULPino. The Microcontroller/FPGA folder contains a tutorial on how to implement this microcontroller on a Xilinx development board.
