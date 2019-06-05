@@ -2,7 +2,7 @@
 
 This module is used to transmit the sensor output to a Master SPI, it is composed of an SPI slave and a counter that measures the output frequency of the PVT sensors. The module is depicted below: 
 
-![alt text](https://github.com/scale-lab/PVTsensors-Dev/blob/master/Sensors/SPI/SPI_Sensor.png)
+![alt text](https://github.com/scale-lab/PVTsensors/blob/master/Sensors/SPI/SPI_Sensor.png)
 
 
 The frequency counter transmits the measured frequency to the SPI slave throught the tx_load_data wire, then the SPI slave and master communicate using the regular SPI protocol, using the four signals: sclk (clock), Master Out, Slave In (mosi), Master In, Slave Out (miso) and select slave (ss_n). 
