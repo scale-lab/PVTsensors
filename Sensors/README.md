@@ -2,7 +2,7 @@
 
 ## General Overview
 
-This folder contains three sensors: 
+This folder contains three sensors and the SPI module: 
 
 - __Temperature Sensor__:
 
@@ -34,6 +34,15 @@ The critical path monitor produces a 16-bit thermometer-coded output. The output
     - Spice netlists for the voltage and temperature sensor;
     - Verilog AMS netlists for the voltage and temperature sensor;
     - Verilog for the critical path monitor sensor (ideal simulation only);
+
+
+- __SPI module__:
+
+The PVT sensors are connected to the SPI module to measure their output frequency, then the module transmits the sensor output to a Master SPI, so it is composed of an SPI slave and a counter. The directory contains the vhdl code of the module, as well as its corresponding scheme. 
+
+
+
+
 
 ## Prerequisites
 
