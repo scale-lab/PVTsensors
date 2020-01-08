@@ -8,10 +8,6 @@ This folder contains Netlist files for the following circuits:
 
 - Analog Temeprature Sensor
 
-- All Digital VT Sensor
-
-- SPI
-
 
 Designs were verified in GF12 technology.
 
