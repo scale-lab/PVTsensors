@@ -1,0 +1,74 @@
+#
+# List of IPs and relative branch/commit-hash/tag.
+# Uses the YAML syntax.
+#
+# Examples:
+#
+#   or10n:
+#     commit: tags/PULP3_final
+#     domain: [cluster]
+#   udma:
+#     commit: 62b10440
+#     domain: [soc]
+#   axi_slice:
+#     commit: master
+#     domain: [soc,cluster]
+# If a *tag* or *commit* is referenced, the IP will be in a
+#  state of DETACHED HEAD. Before committing any additional
+#  work, make sure to checkout a branch.
+#
+
+# APB IPs
+apb/apb_node:
+  commit: pulpinov1
+apb/apb_event_unit:
+  commit: pulpinov1
+apb/apb_fll_if:
+  commit: pulpinov1
+apb/apb_gpio:
+  commit: pulpinov1
+apb/apb_i2c:
+  commit: pulpinov1
+apb/apb_pulpino:
+  commit: pulpinov1
+apb/apb_spi_master:
+  commit: pulpinov1
+apb/apb_timer:
+  commit: pulpinov1
+apb/apb_uart:
+  commit: pulpinov1
+apb/apb_uart_sv:
+  commit: pulpinov1
+apb/apb2per:
+  commit: pulpinov1
+
+
+# AXI IPs
+axi/axi2apb:
+  commit: pulpinov1
+axi/axi_mem_if_DP:
+  commit: pulpinov1
+axi/axi_node:
+  commit: pulpinov1
+axi/axi_slice:
+  commit: pulpinov1
+axi/axi_slice_dc:
+  commit: pulpinov1
+axi/axi_spi_master:
+  commit: pulpinov1
+axi/axi_spi_slave:
+  commit: pulpinov1
+axi/core2axi:
+  commit: pulpinov1
+
+adv_dbg_if:
+  commit: pulpinov1
+
+riscv:
+  commit: pulpinov1
+
+zero-riscy:
+  commit: pulpinov1
+
+fpu:
+  commit: pulpinov1

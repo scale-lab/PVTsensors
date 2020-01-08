@@ -1,0 +1,252 @@
+// This design is based on tsmc 180nm technology. Please replace '/*Target Process Technology*/' with your target technology library!
+// Design cell name: uW_VSensor
+// 'nch' stands for N-channel
+// 'pch' stands for P-channel
+// 'mimcap' stands for MIM capacitor
+// 'pdio' stands for P-diode
+
+`include "disciplines.vams"
+ 
+(* cds_ams_schematic *)
+module uW_TSensor_ams ( QBP,QP,vdd_pin,QB,gnd,
+Q,vdd,IREF ); 
+
+output   QBP;
+output   QP;
+inout   vdd_pin;
+output   QB;
+inout  
+ gnd;
+output   Q;
+inout   vdd;
+input   IREF;
+
+ 
+ 
+ 
+pch #(.w(2u), .m(2),  .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M25 ( ZN_1, S, net0108, 
+vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M2 ( net0108, ZN_2, vdd, 
+vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M27 ( ZN_2, R, net0107, 
+vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M29 ( net0107, ZN_1, 
+vdd, vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M24 ( Q, ZN_1, vdd, vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M23 ( QB, ZN_2, vdd, 
+vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M19 ( net093, Q, 
+vdd_pin, vdd_pin );
+pch #(.w(3u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M17 ( S, Q, net20, vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M22 ( QP, net093, 
+vdd_pin, vdd_pin );
+pch #(.w(4u), .m(1), .nf(1), .l(4u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M7 ( IREF, IREF, vdd, 
+vdd );
+pch #(.w(4u), .m(2), .nf(1), .l(4u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M8 ( net20, IREF, vdd, 
+vdd );
+pch #(.w(3u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M18 ( R, QB, net20, vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M20 ( net092, QB, 
+vdd_pin, vdd_pin );
+pch #(.w(4u), .m(2), .nf(1), .l(4u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M9 ( net15, IREF, vdd, 
+vdd );
+pch #(.w(2u), .m(2), .nf(1), .l(300n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M21 ( QBP, net092, 
+vdd_pin, vdd_pin );
+ 
+pdio #(.m(1), .area(1.75E-10)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+D0 ( net023, gnd );
+ 
+nch #(.w(2u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M26 ( ZN_2, ZN_1, gnd, 
+gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M28 ( ZN_2, R, gnd, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M16 ( ZN_1, S, gnd, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M0 ( ZN_1, ZN_2, gnd, 
+gnd );
+nch #(.w(1.5u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M15 ( QB, ZN_2, gnd, 
+gnd );
+nch #(.w(1.5u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M14 ( Q, ZN_1, gnd, gnd );
+nch #(.w(1.5u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M13 ( QBP, net092, gnd, 
+gnd );
+nch #(.w(1.5u),.m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M12 ( QP, net093, gnd, 
+gnd );
+nch #(.w(1.5u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M11 ( net092, QB, gnd, 
+gnd );
+nch #(.w(1.5u), .m(1), .nf(1), .l(350.0n)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M10 ( net093, Q, gnd, 
+gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(1.5u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M4 ( S, net15, VC1, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(1.5u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M5 ( VC0, QB, gnd, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(1.5u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M3 ( net15, net15, 
+net023, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(1.5u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M1 ( R, net15, VC0, gnd );
+nch #(.w(2u), .m(1), .nf(1), .l(1.5u)) (*
+integer library_binding
+ = "/*Target Process Technology*/";
+integer passed_mfactor = "m";
+ *)
+M6 ( VC1, Q, gnd, gnd );
+ 
+mimcap_2p0_sin #(.mf(1), .wt(4.79u), .lt(4.79u)) (*
+
+integer library_binding = "/*Target Process Technology*/";
+ *)
+C1 ( VC1, gnd );
+mimcap_2p0_sin #(.mf(1), .wt(4.79u), .lt(4.79u)) (*
+
+integer library_binding = "/*Target Process Technology*/";
+ *)
+C0 ( VC0, gnd );
+mimcap_2p0_sin #(.mf(1), .wt(10u), .lt(10u)) (*
+
+integer library_binding = "/*Target Process Technology*/";
+ *)
+C4 ( IREF, vdd );
+
+endmodule
