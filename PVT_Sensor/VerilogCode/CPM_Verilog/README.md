@@ -4,7 +4,7 @@ This folder contains behavioral verilog codes for Critical Path Logic, Scan-chai
 
 CPL.v ==> Verilog Code for Critical Path Logic;
 
-TDC.v ==> Verilog Code for Edge Detector;
+TDC.v ==> Verilog Code for Edge Detector (top module);
 
 SC.v ==> Verilog Code for Scan-chain;
 
