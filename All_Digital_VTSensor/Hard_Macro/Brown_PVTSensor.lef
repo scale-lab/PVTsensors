@@ -28,10 +28,10 @@ LAYER OVERLAP
   TYPE OVERLAP ;
 END OVERLAP
 
-MACRO Utah_pins
+MACRO Brown_PVTSensor
   CLASS BLOCK ;
   ORIGIN 0 0 ;
-  FOREIGN Utah_pins 0 0 ;
+  FOREIGN Brown_PVTSensor 0 0 ;
   SIZE 100 BY 50 ;
   SYMMETRY X Y ;
   SITE sc9mcpp84_14lpp;
@@ -125,6 +125,6 @@ MACRO Utah_pins
     END
   END AVDD
   PROPERTY CatenaDesignType "deviceLevel" ;
-END Utah_pins
+END Brown_PVTSensor
 
 END LIBRARY
