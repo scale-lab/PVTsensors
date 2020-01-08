@@ -23,7 +23,7 @@ All delay numbers are extracted from spice model/datasheet of applied process te
 - __Schematic__:
 
 
-![](Images/CPM_Sch_WhBG.png)
+![](../..//Images/CPM_Sch_WhBG.png)
 
 - __CPM.v__: This is the top module.
 
