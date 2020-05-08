@@ -8,15 +8,6 @@ This folder contains the following:
 
 # Prerequisites
 
-These circuits were designed using Cadence® Virtuoso®, Synopsys® Design Compiler®, Cadence® Innovus® and Mentor® Modelsim®. You must also separately obtain the TSMC 65/55nm GP PDK and ARM 65/55nm GP-based standard cell library, through MOSIS or a commercial license.
+These circuits were designed using CadenceÂ® VirtuosoÂ®, SynopsysÂ® Design CompilerÂ®, CadenceÂ® InnovusÂ® and MentorÂ® ModelsimÂ®. You must also separately obtain the TSMC 65/55nm GP PDK and ARM 65/55nm GP-based standard cell library, through MOSIS or a commercial license.
 
-# Setup
-
-Open terminal, change direction to your target folder and type the following code:
-
-```
-git clone https://github.com/scale-lab/PVTsensors
-```
-
-Detailed instruction will be included in each folder
 
