@@ -4,7 +4,13 @@
 
 This folder contains the following:
 
-- Verilog_65nm_RTL: RTL netlist and testbench of the all-digital VT sensor. 
+- 1st version:
+
+The first version of our sensor is integrated with an AMS VT sensor, under 12nm techonology
+
+- 2nd version:
+
+The lastest version of our sensor is improved in control logic, timing and IO utilization. It is implemented in 65nm technology.
 
 # Prerequisites
 
