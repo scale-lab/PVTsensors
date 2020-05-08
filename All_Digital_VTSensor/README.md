@@ -10,7 +10,7 @@ The first version of our sensor is integrated with an AMS VT sensor, under 12nm 
 
 - 2nd version:
 
-The lastest version of our sensor is improved in control logic, timing and IO utilization. It is implemented in 65nm technology.
+The lastest version of our sensor is improved in control logic, timing and IO utilization. We implemented it in 65nm technology, integrated with a microcontroller.
 
 # Prerequisites
 
